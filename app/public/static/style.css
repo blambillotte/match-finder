@@ -1,0 +1,23 @@
+body {
+  background: url('./austin-smart.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/******* Main Containers ******/
+#content-center{
+  background: rgba(229, 229, 229, 0.7);
+  text-align: center;
+  margin-top: 15%;
+  /*transition: all 1s ease-in-out;*/
+  animation: fade 2s;
+}
+
+#content-center > h2 {
+  font-size: 3.5rem;
+}
+
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
