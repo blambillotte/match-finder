@@ -3,8 +3,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const routes = require('./app/routing/html_routes');
-const apiRoutest = require('./app/routing/api_routes');
+const htmlRoutes = require('./app/routing/html_routes');
+const jsonRoutes = require('./app/routing/json_routes');
 
 
 // Express App
@@ -14,12 +14,17 @@ const PORT = process.env.PORT || 3200;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use('/', routes);
-app.use('/api', apiRoutest);
+app.use('/', htmlRoutes);
+app.use('/api', jsonRoutes);
 app.use(express.static( __dirname + '/app/public/static' ));
 
 
+const parser = bodyParser.urlencoded({ extended: false });
 
+app.post("/surveys", parser, function(req, res) {
+  console.log(req.body);
+
+});
 
 // Starts the server to begin listening
 // =============================================================

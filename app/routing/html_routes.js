@@ -9,18 +9,22 @@ module.exports = (function() {
     const router = express.Router();
 
 
-    router.get("/", function(req, res) {
+    router.get('/', function(req, res) {
       res.sendFile(path.join(__dirname, '../public/index.html'));
     });
 
-    router.get("/survey", function(req, res) {
+    router.get('/surveys/new', function(req, res) {
       res.sendFile(path.join(__dirname, '../public/survey.html'));
     });
 
     router.get('/style.css', function(req, res) {
       res.sendFile(__dirname, '../public/static/style.css');
     });
-
+    // 
+    // router.post('/surveys', function(req, res) {
+    //   console.log(req.body);
+    //   // req.send('Form Submitted');
+    // });
 
     return router;
 })();

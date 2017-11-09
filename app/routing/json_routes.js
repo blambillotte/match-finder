@@ -6,16 +6,23 @@ const express = require('express');
 
 module.exports = (function() {
     'use strict';
-    const api = express.Router();
 
+    const api = express.Router();
 
     api.get("/matches", function(req, res) {
       res.json(test);
     });
 
+    api.post("/surveys/new", function(req, res) {
+      console.log(req);
+      console.log('----');
+      console.log(res);
+    });
+    console.log('this is working');
 
     return api;
 })();
+
 
 
 
