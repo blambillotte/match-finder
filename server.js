@@ -3,6 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const exphbs = require('express-handlebars');
 const htmlRoutes = require('./app/routing/html_routes');
 const jsonRoutes = require('./app/routing/json_routes');
 
@@ -17,6 +18,9 @@ app.use(bodyParser.json());
 app.use('/', htmlRoutes);
 app.use('/api', jsonRoutes);
 app.use(express.static( __dirname + '/app/public/static' ));
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 
 const parser = bodyParser.urlencoded({ extended: false });

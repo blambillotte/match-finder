@@ -26,7 +26,8 @@ module.exports = (function() {
 
     router.get('/surveys/result/:id', function(req, res) {
       const id = req.params.id;
-      res.send(JSON.stringify(puppies[id]));
+      //res.send(JSON.stringify(puppies[id]));
+      res.render("index", puppies[id] );
     });
 
     router.post('/surveys', function(req, res) {
