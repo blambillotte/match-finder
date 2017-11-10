@@ -14,11 +14,11 @@
     <div class="jumbotron" id="content-center">
 
 
-      <form id="survey" action="/surveys" method="post">
+      <form id="survey" action="/surveys" method="POST">
         <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">What's your name?</label>
+          <label for="fname" class="col-sm-4 col-form-label">What's your name?</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="name" placeholder="Your name">
+            <input type="text" class="form-control" id="name" name="fname" placeholder="Your name">
           </div>
         </div>
 
@@ -64,6 +64,7 @@
 
       </form>
 
+      <a class="btn btn-outline-success" href="/" role="button">Back Home</a>
     </div>
   </div>
 

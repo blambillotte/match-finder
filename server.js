@@ -21,10 +21,6 @@ app.use(express.static( __dirname + '/app/public/static' ));
 
 const parser = bodyParser.urlencoded({ extended: false });
 
-app.post("/surveys", parser, function(req, res) {
-  console.log(req.body);
-
-});
 
 // Starts the server to begin listening
 // =============================================================

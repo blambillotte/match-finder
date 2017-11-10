@@ -20,11 +20,11 @@ module.exports = (function() {
     router.get('/style.css', function(req, res) {
       res.sendFile(__dirname, '../public/static/style.css');
     });
-    // 
-    // router.post('/surveys', function(req, res) {
-    //   console.log(req.body);
-    //   // req.send('Form Submitted');
-    // });
+
+    router.post('/surveys', function(req, res) {
+      console.log(req.body);
+      res.end(JSON.stringify(res.body));
+    });
 
     return router;
 })();

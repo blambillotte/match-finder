@@ -12,13 +12,12 @@ module.exports = (function() {
     api.get("/matches", function(req, res) {
       res.json(test);
     });
-
-    api.post("/surveys/new", function(req, res) {
-      console.log(req);
-      console.log('----');
-      console.log(res);
-    });
-    console.log('this is working');
+    //
+    // api.post("/surveys/new", function(req, res) {
+    //   console.log(req);
+    //   console.log('----');
+    //   console.log(res);
+    // });
 
     return api;
 })();
