@@ -18,21 +18,21 @@
         <div class="form-group row">
           <label for="fname" class="col-sm-4 col-form-label">What's your name?</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="name" name="fname" placeholder="Your name">
+            <input type="text" class="form-control" id="name" name="fname" placeholder="Your name" required>
           </div>
         </div>
 
         <div class="form-group row">
           <label for="puppypic" class="col-sm-4 col-form-label">Enter your favorite Puppy picture URL</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="puppypic" name="puppypic" placeholder="Your puppy pic URL">
+            <input type="text" class="form-control" id="puppypic" name="puppypic" placeholder="Your puppy pic URL" required>
           </div>
         </div>
 
         <div class="form-group row">
           <label for="fluffy" class="col-sm-4 col-form-label">How Fluffy Do You Like Your Puppies?</label>
           <div class="col-sm-8">
-            <select class="custom-select form-control" name="fluffy" id="fluffy" placeholder="Your choice">
+            <select class="custom-select form-control" name="fluffy" id="fluffy" placeholder="Your choice" required>
               <option selected></option>
               <option value="1">1. Not Fluffy</option>
               <option value="2">2. Sort of Fluffy</option>
@@ -45,7 +45,7 @@
         <div class="form-group row">
           <label for="energy" class="col-sm-4 col-form-label">How Energetic Do You Like Your Puppies?</label>
           <div class="col-sm-8">
-            <select class="custom-select form-control" name="energy" id="energy" placeholder="Your choice">
+            <select class="custom-select form-control" name="energy" id="energy" placeholder="Your choice" required>
               <option selected></option>
               <option value="1">1. Sleeps All Day</option>
               <option value="2">2. Lazy Dog</option>
@@ -55,15 +55,15 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="row justify-content-end">
+          <div class="col-4">
+            <a class="btn btn-outline-success" href="/" role="button">Back Home</a>
+            <button type="submit" class="btn btn-primary" style="cursor: pointer">Submit</button>
           </div>
         </div>
 
       </form>
 
-      <a class="btn btn-outline-success" href="/" role="button">Back Home</a>
     </div>
   </div>
 

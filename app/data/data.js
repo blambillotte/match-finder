@@ -1,4 +1,4 @@
-
+//Some starter values
 const puppies = [
   {
     fname: 'Sally',
